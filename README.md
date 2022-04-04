@@ -82,102 +82,62 @@ In the given data, we have 10 customers, so size of each chromosome is 1x10 , wh
 
 ## **Genetic Algorithm Pseudo Code**
 
-- Generate Initial Population that satisfies GA Validation Process.
-- For n iterations:
-
--Evaluate Fitness of Each Lending Decision in the population
-
--Perform Roulette Wheel Selection to get Parent Pool
-
--Create New Generation Population using Reproduction, Crossover and Mutation
-
--Perform Forceful Crossover in case no solution generated in new generation
-
--Check Validity of solutions in New Generation Population
-
--Store Best Solution of each generation
-
-- Plot and display best Solution
+    - Generate Initial Population that satisfies GA Validation Process.
+    - For n iterations:
+          -Evaluate Fitness of Each Lending Decision in the population
+          -Perform Roulette Wheel Selection to get Parent Pool
+          -Create New Generation Population using Reproduction, Crossover and Mutation
+          -Perform Forceful Crossover in case no solution generated in new generation
+          -Check Validity of solutions in New Generation Population
+          -Store Best Solution of each generation
+    - Plot and display best Solution
 
 ## **GA Results**
 
 &quot;Best Fitness Value &quot; &quot;6.8352&quot;
-
-&quot;Best Bank Lending…&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;
-
-So, we should lend money to
-
-&quot; Customer&quot; &quot;1&quot; &quot;--Rating&quot; &quot;AAA&quot;
-
+&quot;Best Bank Lending…&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot;  
+So, we should lend money to &quot; Customer&quot; &quot;1&quot; &quot;--Rating&quot; &quot;AAA&quot;
 &quot; Customer&quot; &quot;3&quot; &quot;--Rating&quot; &quot;A&quot;
-
 &quot; Customer&quot; &quot;4&quot; &quot;--Rating&quot; &quot;AA&quot;
-
 &quot; Customer&quot; &quot;6&quot; &quot;--Rating&quot; &quot;AAA&quot;
-
 &quot; Customer&quot; &quot;9&quot; &quot;--Rating&quot; &quot;A&quot;
-
 &quot; Customer&quot; &quot;10&quot; &quot;--Rating&quot; &quot;A&quot;
 
 ![](RackMultipart20220404-4-s6l2c6_html_13c142a6c8e60f9e.png) ![](RackMultipart20220404-4-s6l2c6_html_e6cad6bd16569caa.png)
 
 ## **Genetic Algorithm-Simulated Annealing(GA-SA) Pseudo Code**
 
-- Generate Initial Population that satisfies GA Validation Process.
-- For n iterations:
+      - Generate Initial Population that satisfies GA Validation Process.
+      - For n iterations:
+            -Evaluate Fitness of Each Lending Decision in the population
+            -Perform Roulette Wheel Selection to get Parent Pool
+            -Create New Generation Population using Reproduction, Crossover and Mutation
+            -Perform Forceful Crossover in case no solution generated in new generation
+            
+                -Simulated Annealing Loop
+                While T\&gt;Tmin:
+                    For k iterations:
+                        For each chromosome:
+                            -generate neighbourhood solution by swapping bits
+                            -calculate fitness and compare with fitness of parent
+                            -if fitness of neighbour \&lt; fitness of parent:
+                            Accept solution with Metropolis Criterion
+                            -else keep original sol.
+                  -T=t\*c --- cooling
 
--Evaluate Fitness of Each Lending Decision in the population
-
--Perform Roulette Wheel Selection to get Parent Pool
-
--Create New Generation Population using Reproduction, Crossover and Mutation
-
--Perform Forceful Crossover in case no solution generated in new generation
-
--Simulated Annealing Loop
-
-While T\&gt;Tmin:
-
-For k iterations:
-
-For each chromosome:
-
--generate neighbourhood solution by swapping bits
-
--calculate fitness and compare with fitness of parent
-
--if fitness of neighbour \&lt; fitness of parent:
-
-Accept solution with Metropolis Criterion
-
--else keep original sol.
-
--T=t\*c --- cooling
-
--Check Validity of solutions in New Generation Population
-
--Store Best Solution of each generation
-
-- Plot and display best Solution
+            -Check Validity of solutions in New Generation Population
+            -Store Best Solution of each generation
+      - Plot and display best Solution
 
 ## **GA-SA Results**
 
 &quot;Best Fitness Value &quot; &quot;6.5293&quot;
-
 &quot;Best Bank Lending…&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot;
-
-So, we should lend money to
-
-&quot; Customer&quot; &quot;1&quot; &quot;Rating&quot; &quot;AAA&quot;
-
+So, we should lend money to &quot; Customer&quot; &quot;1&quot; &quot;Rating&quot; &quot;AAA&quot;
 &quot; Customer&quot; &quot;3&quot; &quot;Rating&quot; &quot;A&quot;
-
 &quot; Customer&quot; &quot;6&quot; &quot;Rating&quot; &quot;AAA&quot;
-
 &quot; Customer&quot; &quot;8&quot; &quot;Rating&quot; &quot;AAA&quot;
-
 &quot; Customer&quot; &quot;9&quot; &quot;Rating&quot; &quot;A&quot;
-
 &quot; Customer&quot; &quot;10&quot; &quot;Rating&quot; &quot;A&quot;
 
 ![](RackMultipart20220404-4-s6l2c6_html_b048d51ac1de612.png)
