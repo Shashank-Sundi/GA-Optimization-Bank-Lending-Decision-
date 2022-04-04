@@ -18,7 +18,7 @@ The objectives of the model are:
 
 In the proposed method, the lending decision is dynamically decided based on customer&#39;s loan characteristics. It is assumed that all customers are applicable (good) to get the required loan.GA is employed to search for the most suitable customers depending on a set of factors such as loan age, loan size, loan interest rate, loan type, and borrower credit rating.Moreover, bank variables that are considered for selecting this optimal solution are loan interest rate, expected loan loss ,deposit rate ,reserve ratio, transaction cost .
 
-![](RackMultipart20220404-4-s6l2c6_html_b7262a74f75c676d.png)
+![](https://github.com/Shashank-Sundi/GA-Optimization-Bank-Lending-Decision-/blob/main/methodology.PNG)
 
 ## **Variables used**
 
@@ -26,59 +26,28 @@ In the proposed method, the lending decision is dynamically decided based on cus
 
 **2) Credit Limit –** Maximum loan amount a borrower is eligible for.
 
-3) **Loan Size (L)** – amount of loan requested by a specific customer
+**3) Loan Size (L)** – amount of loan requested by a specific customer
 
 **4) Loan Interest Rate (rL) –** Interest rates are determined using loan age and loan type. These are defined for each borrower based on the mentioned parameters.
 
-**5) Expected Loan Loss (λ) –**Borrow Credit Rating is used to measure the range of the expected
+**5) Expected Loan Loss (λ) –** Borrow Credit Rating is used to measure the range of the expected
 
-![](RackMultipart20220404-4-s6l2c6_html_ad73ca0e13b051d4.png) ![](RackMultipart20220404-4-s6l2c6_html_40ec61c6a0c2d215.png)
-
-![](RackMultipart20220404-4-s6l2c6_html_ba0e22814cbf6b9c.png)
-
-![](RackMultipart20220404-4-s6l2c6_html_5d7ecf06f3f74151.png)
+![](https://github.com/Shashank-Sundi/GA-Optimization-Bank-Lending-Decision-/blob/main/vars.PNG) 
 
 The above data is to be used while implementing the GA or GA-SA algorithms.
 
 ## **Genetic Algorithm Fitness Function**
 
-Fitness function Fx is given by the formula:
+![](https://github.com/Shashank-Sundi/GA-Optimization-Bank-Lending-Decision-/blob/main/fitness.PNG)
+![](https://github.com/Shashank-Sundi/GA-Optimization-Bank-Lending-Decision-/blob/main/fitness%202.PNG)
 
-![](RackMultipart20220404-4-s6l2c6_html_86173cbdf1819e7a.png)
 
-• **Loan Revenue (ϑ)**
-
-The value of the loan revenue is calculated using the loan interest rate (rL), loan size (L), and the expected loan loss (λ ).
-
-![](RackMultipart20220404-4-s6l2c6_html_77b57949fc45550f.png)
-
-• **Loans Cost (μ)**
-
-The value of the loan cost is determined using the loan size (L) and the predetermined institutional cost (δ).
-
-![](RackMultipart20220404-4-s6l2c6_html_3f544ed16a8e4c58.png)
-
-• **Total Transaction Cost (ϖ)**
-
-The value of the total transaction cost is determined using institute transactional cost (T) and the customer transaction rate (rT). The value of rT has been assumed to be 0.01 for the purpose of this project.
-
-Here, the institute transactional cost (T) is determined using the below formula:
-
-T = (1-K)D
-
-![](RackMultipart20220404-4-s6l2c6_html_5ff315358bd2cea.png)
-
-• **Cost of Demand deposit (β)**
-
-The value is determined using the bank&#39;s deposit interest rate (rD) and the bank&#39;s deposit (D)
-
-![](RackMultipart20220404-4-s6l2c6_html_32f2823c9cde4504.png)
 
 ## **GA Validation Process to Generate a GA population with n chromosomes**
 
 In the given data, we have 10 customers, so size of each chromosome is 1x10 , where each bit consists of 1 or 0 depending upon, whether the customer has been lent the loan or not. When we initially generate a population of chromosomes , many of them might be exceeding the credit constraints of the banks .The chromosomes which do not satisfy the credit crunch constraint are discarder .This can be done by calculating the total amount of loan allocation for a solution and comparing it with the total allowable loan amount of the bank.
 
-![](RackMultipart20220404-4-s6l2c6_html_a894edd65adf9df4.png)
+![](https://github.com/Shashank-Sundi/GA-Optimization-Bank-Lending-Decision-/blob/main/Ga%20valiation.PNG)
 
 ## **Genetic Algorithm Pseudo Code**
 
@@ -103,7 +72,7 @@ So, we should lend money to &quot; Customer&quot; &quot;1&quot; &quot;--Rating&q
 &quot; Customer&quot; &quot;9&quot; &quot;--Rating&quot; &quot;A&quot;
 &quot; Customer&quot; &quot;10&quot; &quot;--Rating&quot; &quot;A&quot;
 
-![](RackMultipart20220404-4-s6l2c6_html_13c142a6c8e60f9e.png) ![](RackMultipart20220404-4-s6l2c6_html_e6cad6bd16569caa.png)
+![](https://github.com/Shashank-Sundi/GA-Optimization-Bank-Lending-Decision-/blob/main/GA.PNG)
 
 ## **Genetic Algorithm-Simulated Annealing(GA-SA) Pseudo Code**
 
@@ -140,7 +109,7 @@ So, we should lend money to &quot; Customer&quot; &quot;1&quot; &quot;Rating&quo
 &quot; Customer&quot; &quot;9&quot; &quot;Rating&quot; &quot;A&quot;
 &quot; Customer&quot; &quot;10&quot; &quot;Rating&quot; &quot;A&quot;
 
-![](RackMultipart20220404-4-s6l2c6_html_b048d51ac1de612.png)
+![](https://github.com/Shashank-Sundi/GA-Optimization-Bank-Lending-Decision-/blob/main/saga.PNG)
 
 ## **Comparison of GA and GA-SA-amalgamation**
 
